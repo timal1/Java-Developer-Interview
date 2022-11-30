@@ -12,6 +12,7 @@
         <module>Algorithms</module>
         <module>Multithreading</module>
         <module>DB</module>
+        <module>Web</module>
     </modules>
 
     <packaging>pom</packaging>
