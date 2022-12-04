@@ -13,7 +13,6 @@
         <module>Multithreading</module>
         <module>DB</module>
         <module>SH</module>
-        <module>Web</module>
     </modules>
 
     <packaging>pom</packaging>
