@@ -1,0 +1,21 @@
+server:
+  port: 8180
+  servlet:
+    context-path: /app
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://192.168.1.142:5431/postgres
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL9Dialect
+        ddl-auto: update
+
+    show-sql: true
+    generate-ddl: true
+    database: postgresql
