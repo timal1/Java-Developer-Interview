@@ -2,6 +2,7 @@ package ru.timlad.spring.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import ru.timlad.spring.converter.StudentConverter;
 import ru.timlad.spring.dto.StudentDto;
@@ -12,6 +13,7 @@ import ru.timlad.spring.service.StudentService;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/students")
+@Validated
 public class StudentController {
 
     private final StudentService studentService;
