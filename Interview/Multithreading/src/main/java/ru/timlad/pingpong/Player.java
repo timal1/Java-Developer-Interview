@@ -1,15 +1,21 @@
 package ru.timlad.pingpong;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class Player {
+    Logger logger = Logger.getLogger("Player");
 
     private boolean state;
 
     public synchronized void playerOne() throws InterruptedException {
+
         while (state) {
             this.wait();
         }
-        System.out.println("Ping");
-        state = !state;
+
+        logger.log(Level.INFO, "Ping");
+        state = true;
         this.notify();
     }
 
@@ -17,8 +23,8 @@ public class Player {
         while (!state) {
             this.wait();
         }
-        System.out.println("Pong");
-        state = !state;
+        logger.log(Level.INFO, "Pong");
+        state = false;
         this.notify();
     }
 

@@ -3,9 +3,9 @@ package ru.timlad.pingpong;
 public class PingPongGame {
 
     public static void main(String[] args) {
-        Player player = new Player();
+        var player = new Player();
 
-        Thread threadPlayerOne = new Thread(() -> {
+        var threadPlayerOne = new Thread(() -> {
             for (int i = 0; i < 10; i++) {
                 try {
                     player.playerOne();
@@ -15,7 +15,7 @@ public class PingPongGame {
             }
         });
 
-        Thread threadPlayerTwo = new Thread(() -> {
+        var threadPlayerTwo = new Thread(() -> {
             for (int i = 0; i < 10; i++) {
                 try {
                     player.playerTwo();

@@ -1,6 +1,10 @@
 package ru.timlad.counter;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class Counter {
+    Logger logger = Logger.getLogger("Counter");
     private int value;
 
     public int getValue() {
@@ -9,11 +13,11 @@ public class Counter {
 
     public void increment() {
         value++;
-        System.out.println(value);
+        logger.log(Level.INFO, String.valueOf(value));
     }
 
     public void decrement() {
         value--;
-        System.out.println(value);
+        logger.log(Level.INFO, String.valueOf(value));
     }
 }

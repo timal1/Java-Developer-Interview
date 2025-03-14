@@ -1,15 +1,14 @@
 package ru.timlad.counter;
 
-import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class CounterApp {
     public static void main(String[] args) {
 
-        Counter counter = new Counter();
-        Lock lock = new ReentrantLock();
+        var counter = new Counter();
+        var lock = new ReentrantLock();
 
-        Thread threadIncrement = new Thread(() -> {
+        var threadIncrement = new Thread(() -> {
             for (int i = 0; i < 10; i++) {
                 lock.lock();
                 try {
@@ -20,7 +19,7 @@ public class CounterApp {
             }
         });
 
-        Thread threadDecrement = new Thread(() -> {
+        var threadDecrement = new Thread(() -> {
             for (int i = 0; i < 10; i++) {
                 lock.lock();
                 try {
